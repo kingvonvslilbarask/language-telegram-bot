@@ -1,0 +1,8 @@
+.env
+*.sqlite3
+data/*
+!data/.gitkeep
+assets/*.mp4
+__pycache__/
+.venv/
+*.pyc

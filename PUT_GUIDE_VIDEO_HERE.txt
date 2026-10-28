@@ -1,0 +1,3 @@
+Place your onboarding video here as guide.mp4
+(H.264 mp4, under 50 MB - Telegram's limit for bot uploads).
+It is sent to every student right after their payment is confirmed.

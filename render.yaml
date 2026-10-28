@@ -1,0 +1,24 @@
+# Render Blueprint: "New > Blueprint" in Render reads this file and creates the service.
+services:
+  - type: web
+    name: azela-telegram-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN          # new token from @BotFather
+        sync: false
+      - key: TELEGRAM_WEBHOOK_SECRET     # random, 32+ chars (A-Z a-z 0-9 _ -)
+        sync: false
+      - key: INTERNAL_API_KEY            # random shared key - SAME value as Supabase secret BOT_INTERNAL_API_KEY
+        sync: false
+      - key: WEB_BACKEND_API_KEY         # SAME value again
+        sync: false
+      - key: WEB_BACKEND_URL
+        value: https://sttdkpbqfdurxkdlhema.supabase.co/functions/v1
+      - key: ADMIN_CHAT_IDS              # your Telegram chat id (send /id to the bot)
+        sync: false
+      - key: SCHOOL_NAME
+        value: Azela Language School
+      - key: GUIDE_VIDEO_URL             # optional public https link to the intro video
+        sync: false
